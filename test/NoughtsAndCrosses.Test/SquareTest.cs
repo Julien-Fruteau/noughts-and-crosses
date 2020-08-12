@@ -26,6 +26,22 @@ namespace NoughtsAndCrosses.Test
         }
 
         [Fact]
+        public void TestStructDefaultValueWithJaggedArray()
+        {
+            //Given
+            Square[][] sq = {
+                new Square[1],
+                new Square[1]
+            };
+            //When
+            //Then
+            foreach (var s in sq)
+            {
+                Assert.Equal(".", s[0].ToString());
+            }
+        }
+
+        [Fact]
         public void TestJaggedArrayEx2()
         {
             //Given

@@ -4,7 +4,7 @@ namespace NoughtsAndCrosses
 {
     public enum Player {None = 0, Noughts, Crosses}
 
-    public class Square
+    public struct Square
     {
         public Player Owner {get;}
         public Square(Player owner)
