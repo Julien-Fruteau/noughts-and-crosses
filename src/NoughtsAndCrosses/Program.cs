@@ -6,7 +6,9 @@ namespace NoughtsAndCrosses
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Game game = new Game();
+            game.PlayGame();
+            Console.WriteLine("Game Over");
         }
     }
 }
