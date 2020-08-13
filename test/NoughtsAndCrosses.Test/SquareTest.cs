@@ -53,5 +53,15 @@ namespace NoughtsAndCrosses.Test
             //Then
             Assert.Equal(1, sq[2].Length);
         }
+
+        [Fact]
+        public void TestMultidimensionnalArray()
+        {
+        //Given
+            Square[,] sq = new Square[2, 2];
+        //Then
+            Assert.Equal(".", sq[0, 0].ToString());
+            Assert.Equal(".", sq[0, 1].ToString());
+        }
     }
 }

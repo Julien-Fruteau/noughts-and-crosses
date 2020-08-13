@@ -4,12 +4,7 @@ namespace NoughtsAndCrosses
 {
     public class Game
     {
-        private Square[][] _board =
-        {
-            new Square[3],
-            new Square[3],
-            new Square[3]
-        };
+        private Square[,] _board = new Square[3, 3];
 
         public void PlayGame()
         {
@@ -40,13 +35,13 @@ namespace NoughtsAndCrosses
             if (row < 1 || row > 3 || column < 1 || column > 3)
                 return false;
 
-            if (_board[row - 1][column -1].Owner != Player.None)
+            if (_board[row - 1, column -1].Owner != Player.None)
             {
                 Console.WriteLine("Square is already occupied");
                 return false;
             }
 
-            _board[row -1][column -1] = new Square(player);
+            _board[row -1, column -1] = new Square(player);
             return true;
         }
 
@@ -56,7 +51,7 @@ namespace NoughtsAndCrosses
             {
                 string line = "";
                 for (int j = 0; j < 3; j++)
-                    line += " " + _board[i][j];
+                    line += " " + _board[i, j];
                 Console.WriteLine(line);
             }
         }
